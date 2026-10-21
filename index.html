@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demandas do Saúde Inteligente de Perdigão</title>
+<meta name="description" content="Acompanhamento das demandas do Saúde Inteligente de Perdigão (MG): pedidas, entregues e em andamento.">
+<style id="css">
+:root{--bg:#f4f6f7;--cd:#fff;--tx:#2c3e50;--mu:#7f8c8d;--ln:#d5dbdb;--dk:#34495e;--tl:#0f766e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17202a;--cd:#212f3d;--tx:#ecf0f1;--mu:#aab7b8;--ln:#3b4d5e;--dk:#0e1620}}
+:root[data-theme="dark"]{--bg:#17202a;--cd:#212f3d;--tx:#ecf0f1;--mu:#aab7b8;--ln:#3b4d5e;--dk:#0e1620}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,"Segoe UI",Arial,sans-serif}
+header{border-bottom:1px solid var(--ln);background:var(--cd)}
+.in{max-width:1200px;margin:0 auto;padding:clamp(24px,5vw,56px) 16px clamp(18px,3vw,32px);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between}
+h1{font:700 clamp(30px,5vw,52px)/1.06 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;letter-spacing:-.02em;margin:0 0 12px;max-width:16em}
+.lead{margin:0;color:var(--mu);font-size:clamp(15px,1.6vw,18px);max-width:52ch}header small{color:var(--mu)}
+main{max-width:1200px;margin:0 auto;padding:16px}
+#msg{margin:0 0 12px;padding:10px 12px;border-radius:6px;background:var(--cd);border-left:4px solid #3498db}#msg:empty{display:none}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.k{background:var(--cd);border-radius:8px;padding:12px;border-top:4px solid var(--dk);text-align:center}
+.k b{display:block;font-size:26px}.k span{font-size:11px;color:var(--mu);text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:12px 0}
+.c{background:var(--cd);border-radius:8px;padding:12px;min-width:0}.c h2{font-size:14px;margin:0 0 8px}
+.c div{position:relative;height:250px}
+.f{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.f input,.f select{padding:8px;border:1px solid var(--ln);border-radius:6px;background:var(--cd);color:var(--tx)}.f input{flex:1;min-width:180px}
+.t{overflow-x:auto;background:var(--cd);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--ln);vertical-align:top}
+th{background:var(--dk);color:#fff}tr{cursor:pointer}
+.d{color:var(--mu);font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}tr.o .d{display:block}
+.s{border-radius:10px;padding:2px 9px;font-size:12px;color:#fff;white-space:nowrap}
+</style></head><body>
+<header><div class="in"><div><h1>Demandas do Saúde Inteligente de Perdigão</h1><p class="lead">Acompanhe o que foi pedido, o que já foi entregue e o que está em andamento.</p></div><small id="upd"></small></div></header>
+<main><div id="app"></div></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script id="dados" type="application/json">{"upd":"2026-10-21","file":"","mods":["CAPS","Farmácia e Almoxarifado","Clínica da Mulher","Frotas","Regulação","Geral","Secretaria de Saúde","Hospital","Laboratório","CIS"],"rows":[{"n":1,"t":"Classificação de Risco — Utilizar exclusivamente o Protocolo de Manchester","d":"Ajustar a tela de Classificação de Risco para exibir somente o Protocolo de Manchester, removendo ou ocultando as opções de outros protocolos e aplicando o Manchester em todo o fluxo da classificação.","s":"Pendente","p":"2026-10-21","e":"","m":"Hospital"},{"n":2,"t":"Classificação de Risco — Parâmetro para liberação do paciente da fila conforme a classificação","d":"Criar parâmetro que permita configurar, individualmente para cada classificação (ex.: branca), se o paciente pode ser liberado da fila de atendimento, aplicando a regra automaticamente durante o fluxo de atendimento.","s":"Pendente","p":"2026-10-21","e":"","m":"Hospital"},{"n":3,"t":"Filas de Atendimento — Direcionar pacientes conforme a especialidade médica","d":"Vincular cada especialidade médica à sua fila de atendimento, direcionando o paciente à fila correspondente, evitando filas incompatíveis e mantendo o direcionamento consistente no fluxo. Manter \"Médico clínico\" como especialidade padrão.","s":"Pendente","p":"2026-10-21","e":"","m":"Hospital"},{"n":4,"t":"Fila de Atendimento — Parâmetro para exibir o botão \"Ver Triagem\"","d":"Criar parâmetro para habilitar ou ocultar o botão \"Ver Triagem\" na tela de Fila de Atendimento, conforme a necessidade de cada unidade de saúde. Quando habilitado, o botão segue as permissões do operador.","s":"Pendente","p":"2026-10-21","e":"","m":"Hospital"},{"n":5,"t":"Fila de Atendimento — Parâmetro para impedir o retorno antes da finalização do atendimento","d":"Criar parâmetro que, quando habilitado, impeça o operador de devolver o paciente à fila após iniciar o atendimento, mantendo-o no fluxo até a conclusão e respeitando o bloqueio em todas as ações da interface.","s":"Pendente","p":"2026-10-21","e":"","m":"Hospital"},{"n":6,"t":"Prescrição — Tela na farmácia para medicamentos pendentes de separação","d":"Criar tela na farmácia que liste automaticamente os medicamentos prescritos aguardando separação, com medicamento, paciente e unidade de origem, permitindo acompanhar o status da separação sem duplicidades ou perda de solicitações.","s":"Pendente","p":"2026-10-21","e":"","m":"Farmácia e Almoxarifado"},{"n":7,"t":"Unidade de Saúde — Parâmetro para obrigatoriedade de assinatura eletrônica","d":"Criar parâmetro na configuração da unidade de saúde para exigir a assinatura eletrônica do profissional na finalização do atendimento, impedindo a finalização sem assinatura quando habilitado.","s":"Pendente","p":"2026-10-21","e":"","m":"Geral"},{"n":8,"t":"Unidade de Saúde — Parâmetro para ocultar o botão \"Salvar sem Assinatura\"","d":"Criar parâmetro na configuração da unidade de saúde para exibir ou ocultar o botão \"Salvar sem Assinatura\". Quando habilitado, mantém o comportamento atual; quando oculto, remove o botão da interface.","s":"Pendente","p":"2026-10-21","e":"","m":"Geral"},{"n":9,"t":"Segurança — Alteração obrigatória de senha no primeiro login e a cada 180 dias","d":"Criar parâmetros para exigir nova senha no primeiro acesso e após 180 dias de validade, bloqueando as demais funcionalidades até a troca e registrando a data da última alteração de senha de cada operador.","s":"Pendente","p":"2026-10-21","e":"","m":"Geral"},{"n":10,"t":"Importação de Históricos — Corrigir o fuso horário dos registros do sistema anterior","d":"Corrigir a conversão de datas e horários na importação dos históricos do sistema anterior, para que sejam exibidos corretamente, preservando a sequência cronológica e sem alterar indevidamente os horários originais.","s":"Pendente","p":"2026-10-21","e":"","m":"Geral"},{"n":11,"t":"Separação de Prescrições — Seleção de lote e baixa automática do estoque na entrega","d":"Na separação, exibir os lotes do medicamento da unidade do profissional, permitir escolher o lote e informar a quantidade (sem exceder o saldo) e, ao clicar em \"Entregue\", baixar a quantidade apenas do lote selecionado, uma única vez, atualizando o saldo em tempo real e registrando medicamento, lote, quantidade, paciente e unidade.","s":"Pendente","p":"2026-10-21","e":"","m":"Farmácia e Almoxarifado"}]}</script>
+<script id="code">
+const $=s=>document.querySelector(s),fm=s=>s?s.split('-').reverse().join('/'):'';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const COL={'Solucionado':'#27ae60','Pendente':'#f39c12','Em análise':'#3498db'};
+const stt=v=>/^pend/i.test(v)?'Pendente':/an[aá]lise/i.test(v)?'Em análise':/solu/i.test(v)?'Solucionado':'';
+const ser=v=>{if(v===''||v==null)return '';if(typeof v==='number')return new Date(Math.round((v-25569)*864e5)).toISOString().slice(0,10);
+ const a=String(v).match(/(\d{2})\/(\d{2})\/(\d{4})/);if(a)return a[3]+'-'+a[2]+'-'+a[1];const b=String(v).match(/^\d{4}-\d{2}-\d{2}/);return b?b[0]:''};
+const dd=r=>r.s==='Solucionado'&&r.p&&r.e?Math.round((Date.parse(r.e)-Date.parse(r.p))/864e5):null;
+let D=JSON.parse($('#dados').textContent),CH=[];
+function render(){
+ CH.forEach(c=>c.destroy());CH=[];
+ const R=D.rows,n=s=>R.filter(r=>r.s===s).length,tot=R.length,sol=n('Solucionado'),pen=n('Pendente'),ana=n('Em análise');
+ const ds=R.map(dd).filter(x=>x!==null&&x>=0).sort((a,b)=>a-b),L=ds.length;
+ const med=L?(L%2?ds[(L-1)/2]:(ds[L/2-1]+ds[L/2])/2):0,avg=L?ds.reduce((a,b)=>a+b,0)/L:0;
+ const f1=x=>x.toFixed(1).replace('.',',');
+ const k=(v,l,c)=>`<div class="k" style="border-top-color:${c||'var(--dk)'}"><b style="color:${c||'inherit'}">${v}</b><span>${l}</span></div>`;
+ $('#upd').textContent='Atualizado em '+fm(D.upd);
+ $('#app').innerHTML=`<div class="kpis">${k(tot,'Total')}${k(sol,'Solucionadas','#27ae60')}${k(pen,'Pendentes','#f39c12')}${k(ana,'Em análise','#3498db')}${k(tot?f1(sol/tot*100)+'%':'0%','Resolvidas')}${k(f1(avg),'Tempo médio (dias)')}${k(f1(med),'Tempo mediano (dias)')}</div>
+ <div class="grid"><div class="c"><h2>Status</h2><div><canvas id="c1"></canvas></div></div><div class="c"><h2>Demandas por módulo</h2><div><canvas id="c2"></canvas></div></div><div class="c"><h2>Pedidas x entregues por mês</h2><div><canvas id="c3"></canvas></div></div><div class="c"><h2>Tempo de entrega (dias)</h2><div><canvas id="c4"></canvas></div></div></div>
+ <div class="f"><input id="q" placeholder="Buscar por número, título ou descrição"><select id="fs"><option value="">Todos os status</option>${Object.keys(COL).map(s=>`<option>${s}</option>`).join('')}</select><select id="fm"><option value="">Todos os módulos</option>${D.mods.map(m=>`<option>${esc(m)}</option>`).join('')}</select></div>
+ <p id="cnt"></p><div class="t"><table><thead><tr><th>Nº</th><th>Demanda</th><th>Módulo</th><th>Status</th><th>Pedido</th><th>Entrega</th><th>Dias</th></tr></thead><tbody id="tb"></tbody></table></div>`;
+ Chart.defaults.color=getComputedStyle(document.documentElement).getPropertyValue('--mu').trim()||'#7f8c8d';
+ const mk=(id,cfg)=>{cfg.options=Object.assign({responsive:true,maintainAspectRatio:false},cfg.options);CH.push(new Chart($(id),cfg))};
+ mk('#c1',{type:'doughnut',data:{labels:Object.keys(COL),datasets:[{data:[sol,pen,ana],backgroundColor:Object.values(COL),borderWidth:0}]},options:{plugins:{legend:{position:'right'}}}});
+ mk('#c2',{type:'bar',data:{labels:D.mods,datasets:Object.keys(COL).map(s=>({label:s,data:D.mods.map(m=>R.filter(r=>r.m===m&&r.s===s).length),backgroundColor:COL[s]}))},options:{indexAxis:'y',scales:{x:{stacked:true},y:{stacked:true}},plugins:{legend:{position:'bottom'}}}});
+ const ks=[...R.map(r=>r.p),...R.map(r=>r.e)].filter(Boolean).map(x=>x.slice(0,7)).sort(),ms=[];
+ if(ks.length){let [y,m]=ks[0].split('-').map(Number);const [y2,m2]=ks[ks.length-1].split('-').map(Number);while(y<y2||(y===y2&&m<=m2)){ms.push(y+'-'+String(m).padStart(2,'0'));if(++m>12){m=1;y++}}}
+ const cm=(a,q)=>R.filter(r=>r[a]&&r[a].slice(0,7)===q).length;
+ mk('#c3',{type:'bar',data:{labels:ms.map(q=>q.slice(5)+'/'+q.slice(0,4)),datasets:[{label:'Pedidas',data:ms.map(q=>cm('p',q)),backgroundColor:'#5d7a96'},{label:'Entregues',data:ms.map(q=>cm('e',q)),backgroundColor:'#27ae60'}]},options:{plugins:{legend:{position:'bottom'}}}});
+ const B=[['Mesmo dia',0,0],['1 dia',1,1],['2 a 3',2,3],['4 a 7',4,7],['8 a 30',8,30],['Mais de 30',31,1e9]];
+ mk('#c4',{type:'bar',data:{labels:B.map(b=>b[0]),datasets:[{label:'Demandas',data:B.map(b=>ds.filter(x=>x>=b[1]&&x<=b[2]).length),backgroundColor:'#3498db'}]},options:{plugins:{legend:{display:false}}}});
+ const draw=()=>{const q=$('#q').value.toLowerCase(),s=$('#fs').value,m=$('#fm').value;
+  const T=[...R].sort((a,b)=>b.n-a.n).filter(r=>(!s||r.s===s)&&(!m||r.m===m)&&(!q||(r.n+' '+r.t+' '+r.d).toLowerCase().includes(q)));
+  $('#cnt').textContent=T.length+' de '+tot+' demandas';
+  $('#tb').innerHTML=T.map(r=>{const d=dd(r);return `<tr><td>${r.n}</td><td><b>${esc(r.t)}</b><div class="d">${esc(r.d)}</div></td><td>${esc(r.m)}</td><td><span class="s" style="background:${COL[r.s]||'#7f8c8d'}">${esc(r.s)}</span></td><td>${fm(r.p)}</td><td>${fm(r.e)}</td><td>${d===null?'':d}</td></tr>`}).join('')};
+ ['#q','#fs','#fm'].forEach(i=>$(i).addEventListener('input',draw));
+ $('#tb').addEventListener('click',e=>{const t=e.target.closest('tr');if(t)t.classList.toggle('o')});
+ draw();
+}
+render();
+</script>
+</body></html>
